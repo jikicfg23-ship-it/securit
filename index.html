@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المحلل السيبراني الفائق والمطهر الآمن للروابط</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- مكتبة CryptoJS لتوليد الهاش والتحقق الأمني -->
+    <script src="https://cloudflare.com"></script>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- ================= 1. شاشة القفل بكلمة السر ================= -->
+        <div id="lock-screen" class="screen active">
+            <div class="security-badge">🛡️</div>
+            <h2>بوابة الفحص السيبراني</h2>
+            <p class="subtitle">برجاء إدخال رمز المرور المصرح به لفتح الأداة</p>
+            
+            <div class="input-group">
+                <input type="password" id="app-password" placeholder="أدخل كلمة السر هنا...">
+            </div>
+            
+            <button id="btn-login" class="btn primary">التحقق وفتح النظام</button>
+            <div id="login-error" class="error-msg"></div>
+        </div>
+
+        <!-- ================= 2. شاشة فاحص الروابط الأساسية ================= -->
+        <div id="analyzer-screen" class="screen">
+            <div class="app-header">
+                <h3>🔍 فاحص ومطهر الروابط المحلي المتقدم</h3>
+                <button id="btn-lock-out" class="btn-mini">قفل الأداة 🔒</button>
+            </div>
+            
+            <p class="section-desc">ضع أي رابط مشبوه هنا لتفكيكه، تنظيفه، وتحليله بأحدث خوارزميات الكشف المحلية.</p>
+
+            <div class="input-group">
+                <input type="text" id="url-input" placeholder="ضع الرابط هنا للاختبار الفوري...">
+            </div>
+
+            <button id="btn-analyze" class="btn success">ابدأ الفحص العميق والتطهير اللحظي</button>
+
+            <!-- لوحة عرض نتائج التقرير الأمني المتقدم -->
+            <div id="result-board" class="result-board" style="display: none;">
+                <h4>📊 تقرير الحماية والتحليل المشترك العالي:</h4>
+                
+                <div class="report-item">
+                    <span class="report-label">مستوى التهديد الكلي:</span>
+                    <span id="res-status" class="badge">--</span>
+                </div>
+
+                <div class="report-item">
+                    <span class="report-label">الرابط النهائي بعد التطهير:</span>
+                    <div class="url-clean-box">
+                        <span id="res-clean-url">--</span>
+                        <button id="btn-copy-url" class="btn-copy">📋 نسخ</button>
+                    </div>
+                </div>
+
+                <div class="report-item">
+                    <span class="report-label">تحليل بنية النطاق (Domain Anatomy):</span>
+                    <span id="res-domain-info" class="report-text">--</span>
+                </div>
+
+                <div class="report-item">
+                    <span class="report-label">فحص الاحتيال البصري والرموز الملتوية:</span>
+                    <span id="res-punycode-info" class="report-text">--</span>
+                </div>
+
+                <div class="report-item">
+                    <span class="report-label">أدوات التجسس والتتبع الخلفي (Trackers):</span>
+                    <span id="res-tracker-info" class="report-text">--</span>
+                </div>
+
+                <div class="system-note">🛡️ تم تحديث محرك الكشف المحلي لأحدث معايير الأمان 2026. الفحص بالكامل يتم على جهازك لحماية خصوصيتك المطلقة.</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
